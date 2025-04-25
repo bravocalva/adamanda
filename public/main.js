@@ -62,6 +62,12 @@ ScrollReveal().reveal(".room__card", {
   interval: 500,
 });
 
+// room container
+ScrollReveal().reveal(".room__card--small", {
+  ...scrollRevealOption,
+  interval: 500,
+});
+
 // service container
 ScrollReveal().reveal(".service__list li", {
   ...scrollRevealOption,

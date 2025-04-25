@@ -54,17 +54,18 @@
   color: var(--text-light);
 }
 
-.btn {
-  padding: 0.75rem 1.5rem;
-  outline: none;
-  border: none;
-  font-size: 1rem;
-  font-weight: 500;
-  color: var(--white);
-  background-color: var(--primary-color);
-  border-radius: 5px;
-  cursor: pointer;
-  transition: 0.3s;
+.btn{
+  padding: 0.75rem 1.5rem !important;
+  outline: none !important;
+  border: none !important;
+  font-size: 1rem !important;
+  font-weight: 500 !important;
+  color: var(--white) !important;
+  background-color: var(--primary-color) !important;
+  border-radius: 5px !important;
+  cursor: pointer !important;
+  transition: 0.3s !important;
+  font-weight: normal !important;
 }
 
 .btn:hover {
@@ -261,8 +262,15 @@ nav {
 }
 
 .room__card__image {
+  
   position: relative;
   isolation: isolate;
+}
+
+.room_img {
+  width: 100%;
+  height: 288px;
+  object-fit: cover; 
 }
 
 .room__card__details ul {
@@ -870,6 +878,49 @@ input[type="date"] {
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
 
+.custom-btn {
+  background-color: #f77f00;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  font-weight: normal;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.custom-btn:hover {
+  background-color: #cf6700;
+}
+
+.custom-input {
+  width: 100%;
+  padding: 8px 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.form-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+.form-group {
+  flex: 1 1 200px;
+  display: flex;
+  flex-direction: column;
+  color: white;
+}
+
+.habitaciones-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1.5rem;
+  padding: 1rem;
+}
 
 
 
