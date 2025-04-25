@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="icon" type="image/x-icon" href="/img/favicon.ico">
+  <link href="https://cdn.jsdelivr.net/npm/remixicon@4.0.0/fonts/remixicon.css" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+  <title>Hotel Adamanda | Inicio</title>
+</head>
+
+<body>
+  <header class="header">
+    <nav>
+      <div class="nav__bar">
+        <div class="logo">
+          <a href="#"><img src="img/logo.png" alt="logo" /></a>
+        </div>
+        <div class="nav__menu__btn" id="menu-btn">
+          <i class="ri-menu-line"></i>
+        </div>
+      </div>
+      <ul class="nav__links" id="nav-links">
+        <li><a href="#home">Inicio</a></li>
+        <li><a href="habitaciones.html">Habitaciones</a></li>
+        <li><a href="galeria.html">Galería</a></li>
+        <li><a href="#about">Nosotros</a></li>
+        <li><a href="contacto.html">Contacto</a></li>
+      </ul>
+      <button class="btn nav__btn">Reservar Ahora</button>
+    </nav>
+    <div class="section__container header__container" id="home">
+      <p>Simple - Único - Amigable</p>
+      <h1>Siéntete Como en Casa<br />En Nuestro <span>Hotel</span>.</h1>
+    </div>
+  </header>
+
+  <section class="section__container booking__container">
+    <form action="/" class="booking__form">
+      <div class="input__group">
+        <span><i class="ri-calendar-2-fill"></i></span>
+        <div>
+          <label for="check-in">ENTRADA</label>
+          <input id="fecha_entrada" type="date" placeholder="Fecha de Entrada" />
+        </div>
+      </div>
+      <div class="input__group">
+        <span><i class="ri-calendar-2-fill"></i></span>
+        <div>
+          <label for="check-out">SALIDA</label>
+          <input id="fecha_salida" type="date" min="" placeholder="Fecha de Salida" />
+        </div>
+      </div>
+      <div class="input__group">
+        <span><i class="ri-filter-line"></i></span>
+        <div>
+          <label for="guest">TIPO</label>
+          <select id="tipo_habitacion" name="tipo_habitacion">
+            <option value="" disabled selected>Selecciona una opción</option>
+          </select>
+        </div>
+      </div>
+      <div class="input__group input__btn">
+        <a class="btn" type="button" id="btn-disponibilidad">Ver Disponibilidad</a>
+      </div>
+    </form>
+  </section>
+
+  </section>
+
+  <section class="section__container about__container" id="about">
+    <div class="about__image">
+      <img src="img/about.jpg" alt="about" />
+    </div>
+    <div class="about__content">
+      <p class="section__subheader">SOBRE NOSOTROS</p>
+      <h2 class="section__header">¡Las Mejores Vacaciones Comienzan Aquí!</h2>
+      <p class="section__description">
+        Con un enfoque en alojamientos de calidad, experiencias personalizadas
+        y reservas sin complicaciones, nuestra plataforma está dedicada a
+        garantizar que cada viajero emprenda sus vacaciones soñadas con
+        confianza y emoción.
+      </p>
+      <div class="about__btn">
+        <a href="contacto.html">
+          <button class="btn">Contactanos</button>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <section class="section__container room__container">
+    <p class="section__subheader">NUESTRAS HABITACIONES</p>
+    <h2 class="section__header">El Descanso Más Memoriable Comienza Aquí.</h2>
+    <div class="room__grid">
+      <div class="room__card">
+        <div class="room__card__image">
+          <img src="img/room-1.jpg" alt="room" />
+          <div class="room__card__icons">
+            <span><i class="ri-heart-fill"></i></span>
+            <span><i class="ri-wifi-line"></i></span>
+            <span><i class="ri-shield-star-line"></i></span>
+          </div>
+        </div>
+        <div class="room__card__details">
+          <h4>Cabaña</h4>
+          <p>
+            Disfruta de una habitacion estilo cabaña.
+          </p>
+          <h5>Desde <span>$1,600.00</span></h5>
+          <button class="btn">Reservar Ahora</button>
+        </div>
+      </div>
+      <div class="room__card">
+        <div class="room__card__image">
+          <img src="img/room-2.jpg" alt="room" />
+          <div class="room__card__icons">
+            <span><i class="ri-heart-fill"></i></span>
+            <span><i class="ri-wifi-line"></i></span>
+            <span><i class="ri-shield-star-line"></i></span>
+          </div>
+        </div>
+        <div class="room__card__details">
+          <h4>Cuarto doble</h4>
+          <p>
+            Espacioso y acogedor, perfecto para crear recuerdos inolvidables con
+            tus seres queridos.
+          </p>
+          <h5>Desde <span>$1,300.00</span></h5>
+          <button class="btn">Reservar Ahora</button>
+        </div>
+      </div>
+      <div class="room__card">
+        <div class="room__card__image">
+          <img src="img/room-3.jpg" alt="room" />
+          <div class="room__card__icons">
+            <span><i class="ri-heart-fill"></i></span>
+            <span><i class="ri-wifi-line"></i></span>
+            <span><i class="ri-shield-star-line"></i></span>
+          </div>
+        </div>
+        <div class="room__card__details">
+          <h4>Cuarto sencillo</h4>
+          <p>
+            Elegancia y comodidad moderna en el corazón de la ciudad.
+          </p>
+          <h5>Desde <span>$1,300.00</span></h5>
+          <button class="btn">Reservar Ahora</button>
+        </div>
+      </div>
+    </div>
+    <div class="room__more">
+      <a href="habitaciones.html" class="btn">Ver Todas las Habitaciones</a>
+    </div>
+  </section>
+
+  <section class="service" id="service">
+    <div class="section__container service__container">
+      <div class="service__content">
+        <p class="section__subheader">SERVICIOS</p>
+        <h2 class="section__header">Nos Esforzamos Solo Por Lo Mejor.</h2>
+        <ul class="service__list">
+          <li>
+            <span><i class="ri-shield-star-line"></i></span>
+            Seguridad de Alto Nivel
+          </li>
+          <li>
+            <span><i class="ri-24-hours-line"></i></span>
+            Servicio de Habitación 24 Horas
+          </li>
+          <li>
+            <span><i class="ri-home-2-line"></i></span>
+            Contamos con cabañas
+          </li>
+          <li>
+            <span><i class="ri-wifi-line"></i></span>
+            Wifi integrado
+          </li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <section class="section__container banner__container">
+
+  </section>
+
+
+  <footer class="footer" id="contact">
+    <div class="section__container footer__container">
+      <div class="footer__col">
+        <div class="logo">
+          <a href="#home"><img src="img/logo.png" alt="logo" /></a>
+        </div>
+        <p class="section__description">
+          Las grandes cosas tienen un lugar especial aqui, gracias por confiar en Hotel
+          Adamanda.
+        </p>
+        <button class="btn">Reservar Ahora</button>
+      </div>
+      <div class="footer__col">
+        <h4>ENLACES RÁPIDOS</h4>
+        <ul class="footer__links">
+          <li><a href="index.html">Inicio</a></li>
+          <li><a href="habitaciones.html">Habitaciones</a></li>
+          <li><a href="galeria.html">Galería</a></li>
+          <li><a href="contacto.html">Contacto</a></li>
+        </ul>
+      </div>
+      <div class="footer__col">
+        <h4>CONTÁCTANOS</h4>
+        <ul class="footer__links">
+          <li><a href="mailto:adamanda.contacto@gmail.com">adamanda.contacto@gmail.com</a></li>
+        </ul>
+        <div class="footer__socials">
+          <a href="https://www.facebook.com/hoteladamanda" target="_blank"><img src="img/facebook.png"
+              alt="facebook" /></a>
+          <a href="https://www.instagram.com/hoteladamanda/" target="_blank"><img src="img/instagram.png"
+              alt="instagram" /></a>
+          <a href="https://maps.app.goo.gl/4GtFr3mMaCnnu8c97" target="_blank"><img src="img/maps.jpg" alt="maps" /></a>
+          <a href="https://wa.me/5522208502/" target="_blank"><img src="img/logow.png" alt="whatsapp" /></a>
+        </div>
+        <a href="contacto.html">
+          <button class="btn">contactanos </button>
+        </a>
+      </div>
+    </div>
+    <div class="footer__bar">
+      Copyright © 2025. Todos los derechos reservados.
+    </div>
+  </footer>
+
+
+  <script src="https://unpkg.com/scrollreveal"></script>
+  <script src="main.js"></script>
+</body>
+
+</html>
+
+<script>
+
+  const hoy = new Date(); //fecha y hora actual
+  const entrada = document.getElementById('fecha_entrada');
+  const salida = document.getElementById('fecha_salida');
+  const select = document.getElementById("tipo_habitacion");
+
+
+  // Formatear la fecha de hoy
+  const yyyy = hoy.getFullYear();
+  const mm = String(hoy.getMonth() + 1).padStart(2, "0");
+  const dd = String(hoy.getDate()).padStart(2, "0");
+  const formatDate = `${yyyy}-${mm}-${dd}`;
+  console.log("Fecha de hoy en formato: " , formatDate);
+
+  //asignamos el valor del input como fecha minima al seleccionar
+  entrada.setAttribute("min", formatDate);
+
+
+  async function cargarTiposDeHabitacion() {
+    try {
+      const response = await fetch('http://localhost/adamanda/api_rest_hotel/tipohabitacion');
+      const tipos = await response.json();
+      tipos.forEach(tipo => {
+        const option = document.createElement('option');
+        option.value = tipo.id_tipo_hab;
+        option.textContent = tipo.nombre;
+        select.appendChild(option);
+      });
+    } catch (error) {
+      console.error("Error cargando tipos de habitación:", error);
+    }
+  }
+
+  //Funcion para redirigir a pagina de habitaciones disponibles
+  function habitacionesDisponibles(){
+    fecha_entrada = document.getElementById('fecha_entrada').value;
+    fecha_salida = document.getElementById('fecha_salida').value;
+    tipo_habitacion = document.getElementById('tipo_habitacion').value;
+    
+    if(!fecha_entrada||!fecha_salida||!tipo_habitacion){
+      alert('Por favor, Llena todos los campos');
+    } else{
+    const url = `disponibilidad.html?fecha_e=${fecha_entrada}&fecha_s=${fecha_salida}&tipo_hab=${tipo_habitacion}`;
+    window.location.href = url;
+    }
+
+  }
+
+  entrada.addEventListener('change', () => {
+    salida.min = entrada.value;
+  });
+
+  cargarTiposDeHabitacion();
+  document.getElementById("btn-disponibilidad").addEventListener("click", habitacionesDisponibles);
+</script>

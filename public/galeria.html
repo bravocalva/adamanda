@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@4.0.0/fonts/remixicon.css" rel="stylesheet">
+    <!-- Swiper CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
+    <link rel="stylesheet" href="styles.css">
+    <title>Hotel Adamanda | Galería</title>
+    <style>
+        /* Estilos mejorados para el carrusel con texto */
+        .swiper {
+            width: 100%;
+            height: 70vh;
+            margin: 2rem 0;
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+        }
+
+        .swiper-slide {
+            position: relative;
+        }
+
+        .swiper-slide img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .slide-content {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background: linear-gradient(to top, rgba(0,0,0,0.8), transparent);
+            color: white;
+            padding: 2rem;
+            padding-top: 4rem;
+        }
+
+        .slide-content h3 {
+            font-size: 1.8rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .slide-content p {
+            font-size: 1rem;
+            max-width: 600px;
+        }
+
+        /* Galería de imágenes */
+        .image-gallery {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 20px;
+            margin: 3rem 0;
+        }
+
+        .gallery-item {
+            position: relative;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            transition: transform 0.3s ease;
+            height: 250px;
+        }
+
+        .gallery-item:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+        }
+
+        .gallery-item img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.5s ease;
+        }
+
+        .gallery-item:hover img {
+            transform: scale(1.05);
+        }
+
+        .gallery-caption {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background: rgba(0,0,0,0.7);
+            color: white;
+            padding: 1rem;
+            transform: translateY(100%);
+            transition: transform 0.3s ease;
+        }
+
+        .gallery-item:hover .gallery-caption {
+            transform: translateY(0);
+        }
+
+        @media (max-width: 768px) {
+            .swiper {
+                height: 50vh;
+            }
+            
+            .slide-content h3 {
+                font-size: 1.4rem;
+            }
+            
+            .image-gallery {
+                grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+            }
+        }
+    </style>
+</head>
+<body>
+    <header class="header">
+        <nav>
+            <div class="nav__bar">
+                <div class="logo">
+                    <a href="index.html"><img src="img/logo.png" alt="logo"></a>
+                </div>
+                <div class="nav__menu__btn" id="menu-btn">
+                    <i class="ri-menu-line"></i>
+                </div>
+            </div>
+            <ul class="nav__links" id="nav-links">
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="habitaciones.html">Habitaciones</a></li>
+                <li><a href="galeria.html">Galería</a></li>
+                <li><a href="#about">Nosotros</a></li>
+                <li><a href="#contact">Contacto</a></li>
+            </ul>
+            <button class="btn nav__btn">Reservar Ahora</button>
+        </nav>
+        <div class="section__container header__container">
+            <h1>Galería</h1>
+            <p>Descubre nuestras instalaciones y servicios</p>
+        </div>
+    </header>
+
+    <main class="main-content">
+        <section class="section__container gallery__container">
+            <p class="section__subheader">EXPERIENCIAS</p>
+            <h2 class="section__header">Nuestro Hotel en Imágenes</h2>
+            
+            <!-- Carrusel con texto -->
+            <div class="swiper mySwiper">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                        <img src="img/galeria/img1.jpg" alt="Lobby del hotel">
+                        <div class="slide-content">
+                            <h3>Entrada Principal</h3>
+                            <p>Nuestra entrada, ofreciendo la bienvenida perfecta a nuestros huéspedes.</p>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="img/galeria/img2.jpg" alt="Habitación deluxe">
+                        <div class="slide-content">
+                            <h3>Habitaciónes dobles</h3>
+                            <p>Amplias habitaciones, diseñadas para ofrecer el máximo confort durante su estancia.</p>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="img/galeria/img3.jpg" alt="Restaurante">
+                        <div class="slide-content">
+                            <h3>Salon para eventos</h3>
+                            <p>Contamos con un salon en el jardin para posibles eventos.</p>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="img/galeria/img4.jpg" alt="Piscina">
+                        <div class="slide-content">
+                            <h3>Área de jardin</h3>
+                            <p>Relájese en nuestro jardin que tenemos con buenos lugares para pasar el rato y tomarse fotos.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="swiper-button-next"></div>
+                <div class="swiper-button-prev"></div>
+                <div class="swiper-pagination"></div>
+            </div>
+            
+            <!-- Galería adicional -->
+            <h3 class="gallery-title">Explora Más</h3>
+            <div class="image-gallery">
+                <div class="gallery-item">
+                    <img src="img/galeria/img5.jpg" alt="Spa">
+                    <div class="gallery-caption">Nuestras Cabañas</div>
+                </div>
+                <div class="gallery-item">
+                    <img src="img/galeria/img6.jpg" alt="Gimnasio">
+                    <div class="gallery-caption">Jardin para diversas activiades</div>
+                </div>
+                <div class="gallery-item">
+                    <img src="img/galeria/img7.jpg" alt="Salón de eventos">
+                    <div class="gallery-caption">Nuestras Amacas</div>
+                </div>
+                <div class="gallery-item">
+                    <img src="img/galeria/img8.jpg" alt="Bar">
+                    <div class="gallery-caption">Nuestras camas</div>
+                </div>
+                <div class="gallery-item">
+                    <img src="img/galeria/img9.jpg" alt="Vista nocturna">
+                    <div class="gallery-caption">Vistas nocturnas de nuestros jardines</div>
+                </div>
+                <div class="gallery-item">
+                    <img src="img/galeria/img11.jpg" alt="Servicio a la habitación">
+                    <div class="gallery-caption">Cascada en el jardin</div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer" id="contact">
+        <div class="section__container footer__container">
+          <div class="footer__col">
+            <div class="logo">
+              <a href="#home"><img src="img/logo.png" alt="logo" /></a>
+            </div>
+            <p class="section__description">
+              Las grandes cosas tienen un lugar especial aqui, gracias por confiar en Hotel 
+              Adamanda.          
+            </p>
+            <button class="btn">Reservar Ahora</button>
+          </div>
+          <div class="footer__col">
+            <h4>ENLACES RÁPIDOS</h4>
+            <ul class="footer__links">
+              <li><a href="index.html">Inicio</a></li>
+              <li><a href="habitaciones.html">Habitaciones</a></li>
+              <li><a href="galeria.html">Galería</a></li>
+              <li><a href="contacto.html">Contacto</a></li>
+            </ul>
+          </div>
+          <div class="footer__col">
+            <h4>CONTÁCTANOS</h4>
+            <ul class="footer__links">
+              <li><a href="mailto:adamanda.contacto@gmail.com">adamanda.contacto@gmail.com</a></li>
+            </ul>
+            <div class="footer__socials">
+              <a href="https://www.facebook.com/hoteladamanda" target="_blank"><img src="img/facebook.png" alt="facebook" /></a>
+              <a href="https://www.instagram.com/hoteladamanda/" target="_blank"><img src="img/instagram.png" alt="instagram" /></a>
+              <a href="https://maps.app.goo.gl/4GtFr3mMaCnnu8c97" target="_blank"><img src="img/maps.jpg" alt="maps" /></a>
+              <a href="https://wa.me/5522208502/" target="_blank"><img src="img/logow.png" alt="whatsapp" /></a>
+            </div>
+            <a href="contacto.html">
+              <button class="btn">contactanos </button>
+            </a>
+          </div>
+        </div>
+        <div class="footer__bar">
+          Copyright © 2025. Todos los derechos reservados.
+        </div>
+      </footer>
+    <!-- Swiper JS -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script>
+        // Inicialización del carrusel
+        const swiper = new Swiper(".mySwiper", {
+            loop: true,
+            autoplay: {
+                delay: 5000,
+                disableOnInteraction: false,
+            },
+            pagination: {
+                el: ".swiper-pagination",
+                clickable: true,
+            },
+            navigation: {
+                nextEl: ".swiper-button-next",
+                prevEl: ".swiper-button-prev",
+            },
+            effect: 'fade',
+            fadeEffect: {
+                crossFade: true
+            },
+        });
+    </script>
+    <script src="main.js"></script>
+</body>
+</html>

@@ -1,0 +1,116 @@
+/* Estilos específicos para la página de contacto */
+
+.contact__container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 3rem;
+    padding: 4rem 0;
+}
+
+.contact__info {
+    padding: 2rem;
+}
+
+.contact__grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 2rem;
+    margin-top: 2rem;
+}
+
+.contact__card {
+    background: #f9f9f9;
+    padding: 2rem;
+    border-radius: 10px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.contact__card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+}
+
+.contact__card span {
+    display: inline-block;
+    margin-bottom: 1rem;
+    font-size: 1.5rem;
+    color: #ff7f50;
+}
+
+.contact__card h4 {
+    margin-bottom: 0.5rem;
+    color: #333;
+}
+
+.contact__card p {
+    color: #666;
+    line-height: 1.6;
+}
+
+.contact__form {
+    background: #fff;
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+
+.form__group {
+    margin-bottom: 1.5rem;
+}
+
+.form__group input,
+.form__group select,
+.form__group textarea {
+    width: 100%;
+    padding: 1rem;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 1rem;
+    transition: border-color 0.3s ease;
+}
+
+.form__group input:focus,
+.form__group select:focus,
+.form__group textarea:focus {
+    border-color: #ff7f50;
+    outline: none;
+}
+
+.form__group textarea {
+    resize: vertical;
+    min-height: 150px;
+}
+
+.map__container {
+    margin-top: 3rem;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .contact__container {
+        grid-template-columns: 1fr;
+    }
+    
+    .contact__info {
+        padding: 1rem;
+    }
+    
+    .contact__form {
+        padding: 1.5rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .contact__card {
+        padding: 1.5rem;
+    }
+    
+    .form__group input,
+    .form__group select,
+    .form__group textarea {
+        padding: 0.8rem;
+    }
+}

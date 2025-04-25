@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <link href="https://cdn.jsdelivr.net/npm/remixicon@4.0.0/fonts/remixicon.css" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+  <title>Habitaciones Disponibles | Hotel Adamanda</title>
+</head>
+
+<body>
+  <header class="bg2">
+    <nav>
+      <div class="nav__bar">
+        <div class="logo">
+          <a href="index.html"><img src="img/logo.png" alt="logo" /></a>
+        </div>
+        <div class="nav__menu__btn" id="menu-btn">
+          <i class="ri-menu-line"></i>
+        </div>
+      </div>
+      <ul class="nav__links" id="nav-links">
+        <li><a href="index.html">Inicio</a></li>
+        <li><a href="habitaciones.html">Habitaciones</a></li>
+        <li><a href="galeria.html">Galería</a></li>
+        <li><a href="#about">Nosotros</a></li>
+        <li><a href="contacto.html">Contacto</a></li>
+      </ul>
+      <button class="btn nav__btn">Reservar Ahora</button>
+    </nav>
+    <div class="section__container header__container">
+      <h1>Habitaciones Disponibles</h1>
+      <p>Consulta y reserva habitaciones disponibles ahora mismo.</p>
+    </div>
+  </header>
+
+  <section class="section__container room__container">
+    <p class="section__subheader">EXPLORA</p>
+    <h2 class="section__header">Disponibilidad Actual</h2>
+    <div class="container py-3">
+      <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-4" id="habitaciones-container">
+        <!-- Tarjetas se insertan con JavaScript -->
+      </div>
+    </div>
+  </section>
+
+  <footer class="footer" id="contact">
+    <div class="section__container footer__container">
+      <div class="footer__col">
+        <div class="logo">
+          <a href="#home"><img src="img/logo.png" alt="logo" /></a>
+        </div>
+        <p class="section__description">
+          Las grandes cosas tienen un lugar especial aquí. Gracias por confiar en Hotel Adamanda.
+        </p>
+        <button class="btn">Reservar Ahora</button>
+      </div>
+      <div class="footer__col">
+        <h4>ENLACES RÁPIDOS</h4>
+        <ul class="footer__links">
+          <li><a href="index.html">Inicio</a></li>
+          <li><a href="habitaciones.html">Habitaciones</a></li>
+          <li><a href="galeria.html">Galería</a></li>
+          <li><a href="contacto.html">Contacto</a></li>
+        </ul>
+      </div>
+      <div class="footer__col">
+        <h4>CONTÁCTANOS</h4>
+        <ul class="footer__links">
+          <li><a href="mailto:adamanda.contacto@gmail.com">adamanda.contacto@gmail.com</a></li>
+        </ul>
+        <div class="footer__socials">
+          <a href="https://www.facebook.com/hoteladamanda" target="_blank"><img src="img/facebook.png"
+              alt="facebook" /></a>
+          <a href="https://www.instagram.com/hoteladamanda/" target="_blank"><img src="img/instagram.png"
+              alt="instagram" /></a>
+          <a href="https://maps.app.goo.gl/4GtFr3mMaCnnu8c97" target="_blank"><img src="img/maps.jpg" alt="maps" /></a>
+          <a href="https://wa.me/5522208502/" target="_blank"><img src="img/logow.png" alt="whatsapp" /></a>
+        </div>
+        <a href="contacto.html"><button class="btn">Contáctanos</button></a>
+      </div>
+    </div>
+    <div class="footer__bar">
+      Copyright © 2025. Todos los derechos reservados.
+    </div>
+  </footer>
+
+  <script>
+   const hab =[];
+    const params = new URLSearchParams(window.location.search);
+    const fechaEntrada = params.get('fecha_e');
+    const fechaSalida = params.get('fecha_s');
+    const tipoHabitacion = params.get('tipo_hab');
+
+    const habitaciones = [
+      {
+        tipo: 'Cabaña',
+        descripcion: 'Cabaña para 5 personas.',
+        detalles: [
+          '1 cama king size con 2 sillas y mesa',
+          '1 sala con 2 sofá camas y mesa de centro',
+          'Closet',
+          '1 baño completo dentro de la habitación',
+          'Jardín privado frente a cabaña'
+        ],
+        precio: 1600,
+        imagen: 'img/room-1.jpg'
+      },
+      {
+        tipo: 'Cuarto Doble',
+        descripcion: 'Cuarto doble en módulo de hotel.',
+        detalles: ['2 camas matrimoniales', '1 baño completo', '1 TV'],
+        precio: 1300,
+        imagen: 'img/room-2.jpg'
+      },
+      {
+        tipo: 'Cuarto Sencillo',
+        descripcion: 'Cuarto sencillo.',
+        detalles: ['1 cama king size', '1 baño completo', '1 TV'],
+        precio: 1300,
+        imagen: '/adamanda/uploads/habitaciones/6803b55ed60a1_20250102_162344.jpg'
+      },
+      {
+        tipo: 'Cuarto Sencillo',
+        descripcion: 'Cuarto sencillo.',
+        detalles: ['1 cama king size', '1 baño completo', '1 TV'],
+        precio: 1300,
+        imagen: '/adamanda/uploads/habitaciones/6803b55ed60a1_20250102_162344.jpg'
+      },
+      {
+        tipo: 'Cuarto Sencillo',
+        descripcion: 'Cuarto sencillo.',
+        detalles: ['1 cama king size', '1 baño completo', '1 TV'],
+        precio: 1300,
+        imagen: '/adamanda/uploads/habitaciones/6803b55ed60a1_20250102_162344.jpg'
+      },
+      {
+        tipo: 'Cuarto Sencillo',
+        descripcion: 'Cuarto sencillo.',
+        detalles: ['1 cama king size', '1 baño completo', '1 TV'],
+        precio: 1300,
+        imagen: '/adamanda/uploads/habitaciones/6803b55ed60a1_20250102_162344.jpg'
+      }
+    ];
+
+    const contenedor = document.getElementById('habitaciones-container');
+
+    habitaciones.forEach(hab => {
+      const card = document.createElement('div');
+      card.className = 'col-12 col-sm-6 col-md-4 col-lg-3';  // Aquí controlamos el tamaño con Bootstrap
+      card.innerHTML = `
+    <div class="room__card room__card--small">
+      <div class="room__card__image">
+        <img src="${hab.imagen}" alt="${hab.tipo}" />
+      </div>
+      <div class="room__card__details">
+        <h4>${hab.tipo}</h4>
+        <p>${hab.descripcion}</p>
+        <ul>${hab.detalles.map(detalle => `<li>${detalle}</li>`).join('')}</ul>
+        <h5>Desde <span>$${hab.precio.toFixed(2)}</span></h5>
+        <button class="btn btn-primary">Reservar Ahora</button>
+      </div>
+    </div>
+  `;
+      contenedor.appendChild(card);
+    });
+
+  </script>
+</body>
+
+</html>
