@@ -12,6 +12,11 @@ const dd = String(hoy.getDate()).padStart(2, "0");
 const formatDate = `${yyyy}-${mm}-${dd}`;
 console.log("Fecha de hoy en formato: ", formatDate);
 
+// =====================================================================
+const openModal = document.getElementById("openModal");
+const closeModal = document.getElementById("closeModal");
+const modal = document.getElementById("modal");
+
 document.getElementById('fechaEntrada').setAttribute("min", formatDate); //fecha de entrada minima (fecha actual)
 //seteamos los input con las fechas recibidas
 document.getElementById('fechaEntrada').value = fechaEntrada;
@@ -129,11 +134,25 @@ function actualizarHabitaciones() {
             console.error("Error al cargar habitaciones:", error);
             contenedor.innerHTML = `<div class="col-12"><p class="text-danger">Error al cargar habitaciones disponibles.</p></div>`;
         });
-
-
-
-
 }
+
+
+openModal.addEventListener("click", () => {
+  modal.style.display = "flex";
+});
+
+closeModal.addEventListener("click", () => {
+  modal.style.display = "none";
+});
+
+// También cerrar el modal si haces clic fuera del contenido
+window.addEventListener("click", (e) => {
+  if (e.target === modal) {
+    modal.style.display = "none";
+  }
+});
+
+
 
 cargarTiposDeHabitacion();
 cargarHabitaciones();

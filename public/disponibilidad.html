@@ -5,6 +5,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <link href="https://cdn.jsdelivr.net/npm/remixicon@4.0.0/fonts/remixicon.css" rel="stylesheet" />
+
   <link rel="stylesheet" href="styles.css" />
   <title>Habitaciones Disponibles | Hotel Adamanda</title>
 </head>
@@ -52,7 +53,8 @@
         </div>
         <div class="form-group">
           <label>Clic para buscar</label>
-          <button id="buscarDisponibilidad" style="height: 35px;" onclick="actualizarHabitaciones()" class="btn"><strong> Buscar </strong></button>
+          <button id="buscarDisponibilidad" style="height: 35px;" onclick="actualizarHabitaciones()"
+            class="btn"><strong> Buscar </strong></button>
         </div>
       </div>
     </div>
@@ -64,6 +66,30 @@
     <div class="habitaciones-grid" id="habitaciones-container">
       <!-- Tarjetas desde JS -->
     </div>
+
+    <!-- Botón para abrir el modal -->
+    <button id="openModal">Reservar Ahora</button>
+
+    <!-- Modal -->
+    <div id="modal" class="modal">
+      <div class="modal-content">
+        <span id="closeModal" class="close">&times;</span>
+        <h2>Formulario de Reserva</h2>
+        <form id="reservationForm">
+          <label for="nombre">Nombre:</label>
+          <input type="text" id="nombre" name="nombre" required>
+
+          <label for="email">Correo:</label>
+          <input type="email" id="email" name="email" required>
+
+          <label for="fecha">Fecha de Entrada:</label>
+          <input type="date" id="fecha" name="fecha" required>
+
+          <button type="submit">Enviar Reserva</button>
+        </form>
+      </div>
+    </div>
+
   </section>
 
   <footer class="footer" id="contact">
@@ -92,8 +118,10 @@
           <li><a href="mailto:adamanda.contacto@gmail.com">adamanda.contacto@gmail.com</a></li>
         </ul>
         <div class="footer__socials">
-          <a href="https://www.facebook.com/hoteladamanda" target="_blank"><img src="img/facebook.png" alt="facebook" /></a>
-          <a href="https://www.instagram.com/hoteladamanda/" target="_blank"><img src="img/instagram.png" alt="instagram" /></a>
+          <a href="https://www.facebook.com/hoteladamanda" target="_blank"><img src="img/facebook.png"
+              alt="facebook" /></a>
+          <a href="https://www.instagram.com/hoteladamanda/" target="_blank"><img src="img/instagram.png"
+              alt="instagram" /></a>
           <a href="https://maps.app.goo.gl/4GtFr3mMaCnnu8c97" target="_blank"><img src="img/maps.jpg" alt="maps" /></a>
           <a href="https://wa.me/5522208502/" target="_blank"><img src="img/logow.png" alt="whatsapp" /></a>
         </div>
@@ -109,4 +137,5 @@
   <script src="https://unpkg.com/scrollreveal"></script>
   <script src="main.js"></script>
 </body>
+
 </html>
