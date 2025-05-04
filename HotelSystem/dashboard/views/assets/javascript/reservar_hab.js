@@ -184,6 +184,7 @@ async function GenerarHospedaje(){
             body: JSON.stringify(datos)
         });
 
+        // console.log('Respuesta del servidor:', response);
         const resultado = await response.json();
         console.log('Respuesta del servidor:', resultado);
 
@@ -197,7 +198,7 @@ async function GenerarHospedaje(){
             }).then(() => {
                 window.location.href = 'reservar.php';
             });
-        } else {
+        } else if(resultado.ban === 1) {
             Swal.fire('Advertencia', resultado.msg, 'warning');
         }
 

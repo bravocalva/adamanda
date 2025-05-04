@@ -100,7 +100,7 @@ $(document).ready(async function() {
     }
 });
 
-// Función para cancelar reservación (igual que antes)
+// Función para cancelar reservación
 async function cancelarReservacion(id) {
     if (confirm('¿Estás seguro de cancelar esta reservación?')) {
         try {
@@ -111,12 +111,11 @@ async function cancelarReservacion(id) {
                 }
             });
 
-            // if (!response.true) throw new Error('Error al cancelar la reservación');
+            if (response !== 'true') throw new Error('Error al cancelar la reservación');
 
-            // const result = await response.json();
+            const result = await response.json();
             alert(result.message || 'Reservación cancelada exitosamente');
-            
-            // Recargar la tabla para reflejar los cambios
+            // Recargar la tabla 
             reservasTable.ajax.reload(null, false);
             
         } catch (error) {

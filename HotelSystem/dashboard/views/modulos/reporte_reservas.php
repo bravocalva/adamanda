@@ -30,9 +30,6 @@ if (!isset($_SESSION['user'])) {
 
     <!-- JS -->
 
-    
-
-
     <!-- REQUIRED SCRIPTS -->
     <!-- SweetAlert -->
     <script src="../assets/plugins/sweetalert2/sweetalert2.all.min.js"></script>

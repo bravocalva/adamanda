@@ -61,6 +61,7 @@ CREATE TABLE IF NOT EXISTS cliente(
     apellido_m VARCHAR (45) DEFAULT NULL,
     telefono VARCHAR (45) DEFAULT NULL,
     correo VARCHAR (45) DEFAULT NULL,
+    ruta_ine VARCHAR(255) DEFAULT NULL,
      PRIMARY KEY (id_cliente)
 )ENGINE = InnoDB;
 -- -----------------------------------------------------
